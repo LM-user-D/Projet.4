@@ -98,9 +98,9 @@ body {
 }
 
 .picture img {
-	object-fit: cover;
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 }
 #about-me {
 	flex: 2
@@ -137,52 +137,46 @@ plus changment de about-me__introduction en ...  */
 
 
 #gallery {
-	/*	min-height: 100vh; */
+/* 		min-height: 100vh;
+ */
+
 }
 .title{
 	text-align: center;
 	padding-block: 2em;	
 }
 
-
-.gallery .nav {
+.container ul {
+	display: flex;
 	justify-content: center;
 }
 
 
 /* ici ajout du cursor pointer sur les btn  */
-.gallery .nav-link{
+.container .nav .nav-item .nav-link{
 	cursor: pointer;
+	color: #000;
 }
 
-
-
-
-
-
-
-
-
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-link.active {
 	color: #fff;
 	background-color: #BEB45A;
-	border-radius:0 ;
+	border-radius: 0 ;
 }
+
 .nav-pills .nav-link {
 	color: #000
 }
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
 	padding: 0;
-
 }
 .item-column::after{
 	content: "";
 	display: block;
 	padding-bottom: 100%;
-
 }
 .gallery-item {
 	position: absolute;
@@ -204,10 +198,23 @@ plus changment de about-me__introduction en ...  */
 
 
 /* ici redimention de images de la gallery */
-.gallery .item-column img{
+
+.gallery {
 	width: 100%;
-	height: 100%;
+	height: auto;
+	display: grid;
+	grid-template-columns: repeat(3 ,1fr);
+	grid-template-rows: repeat(3 ,1fr);
 }
+
+.gallery .content-img{
+	position: relative;
+	width: 100%;
+	height: 430px;
+	margin: 0px;
+}
+
+
 
 
 .quote {
@@ -295,18 +302,6 @@ plus changment de about-me__introduction en ...  */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 #contact {
 	margin: auto;
 
@@ -346,6 +341,73 @@ plus changment de about-me__introduction en ...  */
 	cursor: pointer;
 	color: #000;
 }
+
+
+/* ici gestion de la momdale slider */
+.modale{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.372);	
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.container-slider{
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+	height: auto;
+	max-width: 450px;
+	background-color: #fff;
+	padding: 15px;
+	border-radius: 5px;
+
+}
+
+
+.container-slider img.see{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.btn-slider{
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	background-color: #fff;
+	outline: none;
+	border: none;
+	border-radius: 12px;
+}
+
+.btn-right{
+	top: 50%;
+	transform: translateY(-70%);
+	right: -40px;
+}
+
+.btn-left{
+	top: 50%;
+	transform: translateY(-70%);
+	left: -40px;
+}
+
+
+
+
+
+
+
+
+
 
 
 

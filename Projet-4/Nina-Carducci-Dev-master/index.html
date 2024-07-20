@@ -33,7 +33,7 @@
 </head>
 <body>
  
-<!-- le fichier Bootstrap.bundle.js a été minifié -->
+<!-- le fichier Bootstrap.bundle.js a été minifié ainsi que celui en css -->
 
 
 
@@ -46,7 +46,7 @@
 				<li><a href="#gallery">Galerie</a></li>
 				<li><a href="#services">Service</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="logo instagram"></a></li>
+				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.svg" alt="logo instagram"></a></li>
 				<!-- revu ici l'attribut alt du logo -->
 			</ul>
 		</nav>
@@ -55,21 +55,24 @@
 <!-- balise main pour le contenu de la page -->
 <main> 
 
-	<!-- changement id header en exempleProjet -->
-	<div id="exemplesProjet">
+
+	<!-- changement id header en exempleProjet  plus ahjout de itemcop...-->
+	<div id="exemplesProjet" itemscope itemtype="http://schema.org/CreativeWork">
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		
 		
 			<div class="carousel-inner">
-				<!-- ici revu les attributs alt des images -->
-				<div class="carousel-item active">
-					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="image vu de haut d'un homme en costume d'affaire qui mache sur un passage pieton" fetchpriority="low" > <!-- ici ajout de l'atribut loading pour resoudre le problème de LCP -->
+				<!-- ici revu les attributs alt des images plus ajout de itemprop... sur les trois div -->
+				<div class="carousel-item active" itemprop="exampleOfWork" itemscope itemtype="http://schema.org/ImageObject">
+					<img itemprop="contentUrl"  src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="image vu de haut d'un homme en costume d'affaire qui mache sur un passage pieton" fetchpriority="low" > <!-- ici ajout de l'atribut loading pour resoudre le problème de LCP -->
 				</div>
-				<div class="carousel-item">
-					<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement" fetchpriority="low" >
+
+				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+					<img itemprop="contentUrl"  src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement" fetchpriority="low" >
 				</div>
-				<div class="carousel-item">
-					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" fetchpriority="low" >
+
+				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+					<img itemprop="contentUrl"  src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" fetchpriority="low" >
 				</div>
 			</div>
 			<!-- BTN qui permetent le defilement des images  -->
@@ -77,6 +80,7 @@
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
+
 			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
@@ -91,7 +95,7 @@
 		</div>
 	</div>
 
-		<!-- ici ajout de l'atribut itemscope -->
+<!-- ici ajout de lien de schéma.org -->
 <div id="about" itemscope itemtype="https://schema.org/LocalBusiness">
 	<div class="picture left">
 		<!-- ici ajout de l'atribut itemscope -->
@@ -126,24 +130,72 @@
 	</div>
 </div>	
 
-<div id="gallery">
+<!-- ici ajout de lien de schéma.org -->
+
+<div itemscope itemtype="http://schema.org/CreativeWork" id="gallery">
 
 	<!-- ici changement de la balise h3 en h2 ca creer un petit decalage car la taille de la police n'est pas la même -->
 	<h2 class="title">Portfolio</h2>
 	
-	<div class="container py-3">
+
+	
+	<!-- à la div container j'ai retiré la class py-3 -->
+
+	<div class="container" >
+	
+		<!-- ici ajout des balises ul et li  -->
+		<ul class="my-4 tags-bar nav ">
+			<li class="nav-item"><span class="nav-link active" data-images="all">Tous</span></li>
+			<li class="nav-item concert"><span class="nav-link" data-images-toggle="Concert">Concert</span></li>
+			<li class="nav-item "><span class="nav-link" data-images-toggle="Entreprises">Entreprises</span></li>
+			<li class="nav-item "><span class="nav-link" data-images-toggle="Mariages">Mariages</span></li>
+			<li class="nav-item "><span class="nav-link" data-images-toggle="Portrait">Portrait</span></li>
+		</ul>	
+
+
+
+
+
+		<div class="gallery"  itemprop="exampleOfWork" itemscope itemtype="http://schema.org/ImageObject">	
+
 		
-		<div class="gallery" style="display: none">	
+			<!-- ici ajout de div content-img -->
 				<!-- ici modification du poids des images plus ajout des atributs alt -->
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo d'un chanteur qui se trouve sur un scène de concert"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Homme en costune d'affaire se tenant face à l'objectif photo"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Photo de femme se trouvant dans un espace de travail"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photo de mains de mariés qui se rejoignent"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Photo du visage d'un homme fermant les yeux"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photo d'un couple de mariés se tenant la main dans un jardin ou se trouve des palmiers"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Photo d'une jenne femme portant des lunettes et se tenant face à l'objectif photo"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photo prise lors d'un concert où l'on peut voir au loin les artistes. Une lumière rouge illumine la foule"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photo d'une femme qui se trouve sur son lieu de travail ayant un grand sourire "/>
+			 <div class="content-img contentConcert" 	data-gallery-tag="Concert"> 
+				<img  itemprop="image" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo d'un chanteur qui se trouve sur un scène de concert"/>
+			</div> 
+
+			<div class="content-img" data-gallery-tag="Entreprises">
+				<img  itemprop="image" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Homme en costune d'affaire se tenant face à l'objectif photo"/>
+			</div>
+
+			<div class="content-img" data-gallery-tag="Entreprises"> 
+				<img  itemprop="image"  class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Photo de femme se trouvant dans un espace de travail"/>
+			</div>
+
+			<div class="content-img" data-gallery-tag="Mariages"> 
+				<img  itemprop="image" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photo de mains de mariés qui se rejoignent"/>
+			</div>
+
+			<div class="content-img" data-gallery-tag="Portrait"> 
+				<img itemprop="image"  class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Photo du visage d'un homme fermant les yeux"/>
+			</div>
+
+			<div class="content-img" data-gallery-tag="Mariages"> 
+				<img itemprop="image"class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photo d'un couple de mariés se tenant la main dans un jardin ou se trouve des palmiers"/>
+			</div>
+
+			<div class="content-img" data-gallery-tag="Portrait"> 
+				<img itemprop="image"class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Photo d'une jenne femme portant des lunettes et se tenant face à l'objectif photo"/>
+			</div>
+
+			<div class="content-img contentConcert" data-gallery-tag="Concert"> 
+				<img itemprop="image"  class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photo prise lors d'un concert où l'on peut voir au loin les artistes. Une lumière rouge illumine la foule"/>
+			</div>
+
+			<div class="content-img" data-gallery-tag="Entreprises"> 
+				<img itemprop="image" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photo d'une femme qui se trouve sur son lieu de travail ayant un grand sourire "/>
+			</div>
 		</div>
 	</div>
 
@@ -162,10 +214,10 @@
 
 </div>
 
-<div id="services">
+<!-- ici ajout de lien de schéma.org -->
+<div id="services" itemscope itemtype="http://schema.org/Service">
 
 	<!-- ici on laisse le h3 Il faut peut-être revoir la position du h3 car quand je clique sur service on ne voit pas le titre-->
-
 	<!-- de plus ajout de itemscope itemtype="http://schema.org/Product" en plus des autres atribut sur les H4 p span et ajout de la balise meta -->
 	<h3 class="title">Mes services</h3>
 
@@ -182,10 +234,8 @@
 
 			<!--  changment de service__price en ... --> 
 			<div class="service-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<meta itemprop="priceCurrency" content="
-				€" />
 				<!-- ici modification h4 span plus un br-->
-				<span>350€/demi journée</span> <br>
+				<span itemprop="priceCurrency" content="EUR">350€/demi journée</span> <br>
 				<span itemprop="description">Matériel, déplacement inclus</span>
 			</div>
 
@@ -202,10 +252,8 @@
 			</div>
 			<!--  changment de service__price en ... --> 
 			<div class="service-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<meta itemprop="priceCurrency" content="
-				€" />
 				<!-- ici modification h4 span plus un br-->
-				<span>50€/photo</span> <br>
+				<span itemprop="priceCurrency" content="EUR">50€/photo</span> <br>
 				<span itemprop="description">2 AR par photo</span>
 			</div>
 		</div>
@@ -226,10 +274,8 @@
 
 			<div class="service-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
-				<meta itemprop="priceCurrency" content="
-				€" />
 				<!-- ici modification h4 span plus un br-->
-				<span>400€ album A4</span> <br>
+				<span itemprop="priceCurrency" content="EUR">400€ album A4</span> <br>
 				<span itemprop="description">30 pages recto/verso</span>
 			</div>
 		</div>
@@ -252,21 +298,20 @@
 </div>
 
 
-
-<div id="contact">
-	<div class="container">
+<!--ici ajout de lien de schéma.org en plus de itemprop à la balise a -->
+<div id="contact" itemscope itemtype="http://schema.org/ContactPoint">
+	<div class="container" >
 		<div class="form-container">
 			<!-- A revoir ici le H3 -->
 			<h3>Une question ? Une demande de devis ?</h3>
 
 			<!-- ici ajout du telephone plus des heunre de disponibilité -->
-			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures, ou à me contact au <a href="tel:+0556677889">05 56 67 78 89</a> du lundi au vendredi de 10 h à 19 h.</p>
+			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures, ou à me contact au <a itemprop="telephone" href="tel:+0556677889">05 56 67 78 89</a> du lundi au vendredi de 10 h à 19 h.</p>
 
 			<!-- ici il faut ajouter l'URL à action  -->
-			<form action="" method="post">
+			<form action="#" method="post">
 				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom">
-
 				<label for="email">Email</label>
 				<input type="email" name="email" id="email">
 				<label for="message">Message</label>
@@ -280,15 +325,54 @@
 	</div>
 </div>
 
+
+
+
+<!-- ici ajout de la boite slider -->
+<div class="modale"> 
+	<div class="container-slider">
+		<img src="" alt="">
+		<button class="btn-slider btn-left" data-action="-1">
+			<img src="/Projet-4/Nina-Carducci-Dev-master/assets/images/icons/arrow-left-solid.svg" alt="">
+		</button>
+
+		<button class="btn-slider btn-right" data-actionR="1">
+			<img src="/Projet-4/Nina-Carducci-Dev-master/assets/images/icons/arrow-right-solid.svg" alt="">
+		</button>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </main>
 
 <!-- les scripts sont ici car on attend que la page soit changée avant l'excution du JS -->
  <!-- aussi ajout de l'atrubyt  -->
 
 	<script async src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script  async src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script async src="./assets/maugallery.js"></script>
+	
+	<!-- <script  async src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+
 	<script async src="./assets/scripts.js"></script>
+	<script async src="./assets/maugallery.js"></script>
+
+	
 
 </body>
 </html>
