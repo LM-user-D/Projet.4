@@ -46,10 +46,6 @@ body {
 	color: #000
 }
 
-
-
-
-
 /* ici modification du la taille de la balise social et de img pour resoudre le problème CLS */
 
 .social-link  {
@@ -67,7 +63,7 @@ body {
 
 
 /* ici gestion des dimention des images du carousel */
-#exemplesProjet .carousel-item img {
+#exemplesProjet .carousel-inner .carousel-item img {
 	width: 100%;
 	height: 100%;
 }
@@ -124,10 +120,9 @@ plus changment de about-me__introduction en ...  */
 	font-weight: 800;
 	font-style: italic;
 	/* en responsive il faudra modifier la width car la taille n'est pas la même que celle de la 1er version du site */
-	width: 60%;
+	width: 75%;
 	font-size: 16px;
 }
-
 
 #about-me p {
 	width: 80%;
@@ -137,13 +132,14 @@ plus changment de about-me__introduction en ...  */
 
 
 #gallery {
-/* 		min-height: 100vh;
- */
+/* 		min-height: 100vh; */
+
 
 }
 .title{
 	text-align: center;
 	padding-block: 2em;	
+	padding-bottom: 10px;
 }
 
 .container ul {
@@ -151,21 +147,15 @@ plus changment de about-me__introduction en ...  */
 	justify-content: center;
 }
 
-
 /* ici ajout du cursor pointer sur les btn  */
-.container .nav .nav-item .nav-link{
+.container .nav-item .nav-link{
 	cursor: pointer;
 	color: #000;
 }
 
 .nav-link.active {
-	color: #fff;
 	background-color: #BEB45A;
-	border-radius: 0 ;
-}
-
-.nav-pills .nav-link {
-	color: #000
+	border-radius: 3px;
 }
 
 .item-column {
@@ -195,27 +185,20 @@ plus changment de about-me__introduction en ...  */
 	display: flex;
 	font-size: 24px;
 }
-
-
 /* ici redimention de images de la gallery */
-
 .gallery {
 	width: 100%;
 	height: auto;
 	display: grid;
 	grid-template-columns: repeat(3 ,1fr);
-	grid-template-rows: repeat(3 ,1fr);
+	grid-template-rows: repeat(auto ,1fr);
 }
-
 .gallery .content-img{
 	position: relative;
 	width: 100%;
-	height: 430px;
+	height: 450px;
 	margin: 0px;
 }
-
-
-
 
 .quote {
 	font-family: 'Spectral';
@@ -233,7 +216,6 @@ plus changment de about-me__introduction en ...  */
 	font-style: italic;
 	font-weight: 300;
 	font-size: 40px;
-
 }
 
 /* ici j'ai ajouté la balise cite */
@@ -300,8 +282,6 @@ plus changment de about-me__introduction en ...  */
 /* ici le text en dessous je l'ai mis ici car en html le ce code se lit après la partie service */
 
 
-
-
 #contact {
 	margin: auto;
 
@@ -332,7 +312,7 @@ plus changment de about-me__introduction en ...  */
 /* ici style de la balise p dans le formulaire  augamentation de la taille de la font */
 .form-container p{
 	font-size: 17px;
-	width: 600px;
+	width: 70%;
 }
 
 
@@ -352,6 +332,7 @@ plus changment de about-me__introduction en ...  */
 	width: 100%;
 	height: 100%;
 	display: none;
+	z-index: 1000;
 }
 .container-slider{
 	position: absolute;
@@ -364,9 +345,7 @@ plus changment de about-me__introduction en ...  */
 	background-color: #fff;
 	padding: 15px;
 	border-radius: 5px;
-
 }
-
 
 .container-slider img.see{
 	position: relative;
@@ -380,8 +359,8 @@ plus changment de about-me__introduction en ...  */
 
 .btn-slider{
 	position: absolute;
-	width: 45px;
-	height: 45px;
+	width: 40px;
+	height: 40px;
 	background-color: #fff;
 	outline: none;
 	border: none;
@@ -391,38 +370,14 @@ plus changment de about-me__introduction en ...  */
 .btn-right{
 	top: 50%;
 	transform: translateY(-70%);
-	right: -40px;
+	right: -35px;
 }
 
 .btn-left{
 	top: 50%;
 	transform: translateY(-70%);
-	left: -40px;
+	left: -35px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 form {
 	display: flex;
@@ -453,6 +408,16 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+
+/* ici modification de la taille des images de la galerie */
+
+@media all and (max-width: 1210px) {
+	.gallery .content-img{
+		height: 400px;
+	}
+
+}
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -460,13 +425,15 @@ input[type="submit"] {
 	#about, #contact .container {
 		align-items: center;
 	}
-	.about-me__title {
+	/* ici  */
+	.about-me{
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
 	#about-me h6, #about-me p {
 		width: 100%;
 	}
+	
 }
 
 @media all and (max-width: 1000px) {
@@ -527,7 +494,52 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+
+	/* ici modification de width de la galerie plus de la taille des images et des citations */
+	#gallery .container{
+		max-width: 100%;
+	}
+
+	.gallery .content-img{
+		height: 320px;
+	}
+
+
+
+	.quote-text {
+		font-size: 20px;
+	}
+
+	.quote-author cite{
+		font-family: "Spectral";
+		font-weight: 800;
+		font-size: 15px;
+	}
 }
+
+/* ici modification de deux media queries */
+
+@media all and (max-width: 800px){
+	.gallery .content-img{
+		height: 280px;
+	}
+	
+}
+
+@media all and (max-width: 760px){
+	#gallery .container{
+		max-width: 90%;
+	}
+	.gallery .content-img{
+		height: 300px;
+	}
+	.gallery{
+		grid-template-columns: repeat(2, 1fr);		
+	}
+
+	
+}
+
 
 @media all and (max-width: 650px) {
 	.top-header {
@@ -556,11 +568,58 @@ input[type="submit"] {
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
-	form {
+	
+	
+	.form-container form {
 		width: 100%;
 	}
 	.picture {
 		width: 80%;
 	}
+
+
+
+
+	/* ici ajout modification de la taille des la galerie et des images  */
+	#gallery .container{
+		max-width: 100%;
+	}
+
+	.gallery .content-img{
+		height: 300px;
+	}
+
+
+	#services h3{
+		position: relative;
+		z-index: 100;
+	}
+
 }
 
+/* ici ajout des media querys  */
+@media all and (max-width: 575px){
+	.gallery{
+		grid-template-columns: repeat(1, 1fr);		
+	}
+
+	.gallery .content-img{
+		height: 500px;
+	}
+}
+	
+
+@media all and (max-width: 455px){
+
+	.gallery .content-img{
+		height: 400px;
+	}
+}
+
+@media all and (max-width: 355px){
+
+	.gallery .content-img{
+		height: 300px;
+	}
+}
+	
