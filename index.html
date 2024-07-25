@@ -44,7 +44,7 @@
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.svg" alt="logo instagram"></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img loading="lazy" src="assets/images/instagram.svg" alt="logo instagram"></a></li>
 			<!-- revu ici l'attribut alt du logo -->
 		</ul>
 	</nav>
@@ -60,15 +60,15 @@
 			<div class="carousel-inner">
 				<!-- ici revu les attributs alt des images plus ajout de itemprop... sur les trois div -->
 				<div class="carousel-item active" itemprop="exampleOfWork" itemscope itemtype="http://schema.org/ImageObject">
-					<img  itemprop="contentUrl"  src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="image vu de haut d'un homme en costume d'affaire qui mache sur un passage pieton" fetchpriority="low" > <!-- ici ajout de l'atribut loading pour resoudre le problème de LCP -->
+					<img  itemprop="contentUrl"  src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="image vu de haut d'un homme en costume d'affaire qui mache sur un passage pieton"  > <!-- ici ajout de l'atribut loading pour resoudre le problème de LCP -->
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img itemprop="contentUrl"  src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement" fetchpriority="low" >
+					<img loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement"   >
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img itemprop="contentUrl"  src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" fetchpriority="low" >
+					<img  loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" >
 				</div>
 			</div>
 			<!-- BTN qui permetent le defilement des images  -->
@@ -95,7 +95,7 @@
 	<div id="about" itemscope itemtype="https://schema.org/LocalBusiness">
 		<div class="picture left">
 			<!-- ici ajout de l'atribut itemscope -->
-			<img src="./assets/images/nina.webp"  itemprop="image"  alt="Photo de Nina Carducci qui se tient face à l'objectif photo">
+			<img loading="lazy" src="./assets/images/nina.webp"  itemprop="image"  alt="Photo de Nina Carducci qui se tient face à l'objectif photo">
 		</div>
 
 		<div id="about-me" >
@@ -137,40 +137,40 @@
 			<div class="gallery"  itemprop="exampleOfWork" itemscope itemtype="http://schema.org/ImageObject">	
 				<!-- ici ajout de div content-img -->
 					<!-- ici modification du poids des images plus ajout des atributs alt -->
-				<div class="content-img contentConcert" 	data-gallery-tag="Concert"> 
-					<img  itemprop="image" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo d'un chanteur qui se trouve sur un scène de concert"/>
+				<div class="content-img contentConcert" data-gallery-tag="Concert"> 
+					<img loading="lazy" itemprop="contentUrl" class="gallery-item" src="./assets/images/gallery/concerts/aaron-pau.webp" alt="Photo d'un chanteur qui se trouve sur un scène de concert"/>
 				</div> 
 
 				<div class="content-img" data-gallery-tag="Entreprises">
-					<img  itemprop="image" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Homme en costune d'affaire se tenant face à l'objectif photo"/>
+					<img loading="lazy"  itemprop="contentUrl" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou.webp" alt="Homme en costune d'affaire se tenant face à l'objectif photo"/>
 				</div>
 
 				<div class="content-img" data-gallery-tag="Entreprises"> 
-					<img  itemprop="image"  class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Photo de femme se trouvant dans un espace de travail"/>
+					<img  loading="lazy" itemprop="contentUrl"  class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman.webp" alt="Photo de femme se trouvant dans un espace de travail"/>
 				</div>
 
 				<div class="content-img" data-gallery-tag="Mariages"> 
-					<img  itemprop="image" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photo de mains de mariés qui se rejoignent"/>
+					<img  loading="lazy" itemprop="contentUrl" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing.webp" alt="Photo de mains de mariés qui se rejoignent"/>
 				</div>
 
 				<div class="content-img" data-gallery-tag="Portrait"> 
-					<img itemprop="image"  class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Photo du visage d'un homme fermant les yeux"/>
+					<img loading="lazy" itemprop="contentUrl"  class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji.webp" alt="Photo du visage d'un homme fermant les yeux"/>
 				</div>
 
 				<div class="content-img" data-gallery-tag="Mariages"> 
-					<img itemprop="image"class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photo d'un couple de mariés se tenant la main dans un jardin ou se trouve des palmiers"/>
+					<img loading="lazy" itemprop="contentUrl"class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens.webp" alt="Photo d'un couple de mariés se tenant la main dans un jardin ou se trouve des palmiers"/>
 				</div>
 
 				<div class="content-img" data-gallery-tag="Portrait"> 
-					<img itemprop="image"class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Photo d'une jenne femme portant des lunettes et se tenant face à l'objectif photo"/>
+					<img loading="lazy" itemprop="contentUrl"class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg.webp" alt="Photo d'une jenne femme portant des lunettes et se tenant face à l'objectif photo"/>
 				</div>
 
 				<div class="content-img contentConcert" data-gallery-tag="Concert"> 
-					<img itemprop="image"  class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photo prise lors d'un concert où l'on peut voir au loin les artistes. Une lumière rouge illumine la foule"/>
+					<img loading="lazy" itemprop="contentUrl"  class="gallery-item" src="./assets/images/gallery/concerts/austin-neill.webp" alt="Photo prise lors d'un concert où l'on peut voir au loin les artistes."/>
 				</div>
 
 				<div class="content-img" data-gallery-tag="Entreprises"> 
-					<img itemprop="image" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photo d'une femme qui se trouve sur son lieu de travail ayant un grand sourire "/>
+					<img loading="lazy" itemprop="contentUrl" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos.webp" alt="Photo d'une femme qui se trouve sur son lieu de travail ayant un grand sourire "/>
 				</div>
 			</div>
 		</div>
@@ -190,7 +190,7 @@
 	</div>
 
 	<!-- ici ajout de lien de schéma.org -->
-	<div id="services" itemscope itemtype="http://schema.org/Service">
+	<div id="services">
 
 		<!-- ici on laisse le h3 Il faut peut-être revoir la position du h3 car quand je clique sur service on ne voit pas le titre-->
 		<!-- de plus ajout de itemscope itemtype="http://schema.org/Product" en plus des autres atribut sur les H4 p span et ajout de la balise meta -->
@@ -198,7 +198,7 @@
 
 		<div class="container">
 
-			<div class="service" itemscope itemtype="http://schema.org/Product">
+			<div class="service"  itemscope itemtype="http://schema.org/Service">
 				<!-- changment de service__description en ... -->
 				<div class="service-description">
 
@@ -210,13 +210,14 @@
 				<!--  changment de service__price en ... --> 
 				<div class="service-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 					<!-- ici modification h4 span plus un br-->
-					<span itemprop="price" content="EUR">350€/demi journée</span> <br>
+					<meta itemprop="priceCurrency" content="EUR">
+					<span itemprop="price">350€/demi journée</span> <br>
 					<span itemprop="description">Matériel, déplacement inclus</span>
 				</div>
 
 			</div>
 			
-			<div class="service"  itemscope itemtype="http://schema.org/Product">
+			<div class="service"  itemscope itemtype="http://schema.org/Service">
 				<!-- changment de service__description en ... -->
 				<div class="service-description">
 					
@@ -227,14 +228,15 @@
 				<!--  changment de service__price en ... --> 
 				<div class="service-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 					<!-- ici modification h4 span plus un br-->
-					<span itemprop="price" content="EUR">50€/photo</span> <br>
+					<meta itemprop="priceCurrency" content="EUR">
+					<span itemprop="price">50€/photo</span> <br>
 					<span itemprop="description">2 AR par photo</span>
 				</div>
 			</div>
 
 
 
-			<div class="service"  itemscope itemtype="http://schema.org/Product">
+			<div class="service"  itemscope itemtype="http://schema.org/Service">
 
 				<!-- changment de service__description en ... -->
 				<div class="service-description">
@@ -249,7 +251,9 @@
 				<div class="service-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
 					<!-- ici modification h4 span plus un br-->
-					<span itemprop="price" content="EUR">400€ album A4</span> <br>
+					<meta itemprop="priceCurrency" content="EUR">
+
+					<span itemprop="price" >400€ album A4</span> <br>
 					<span itemprop="description">30 pages recto/verso</span>
 				</div>
 			</div>
@@ -295,7 +299,7 @@
 
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.webp" alt="Image d'un appareil photo">
+			<img loading="lazy" src="./assets/images/camera.webp" alt="Image d'un appareil photo">
 		</div>
 	</div>
 </div>
@@ -304,13 +308,13 @@
 <!-- ici ajout de la boite slider -->
 <div class="modale"> 
 	<div class="container-slider">
-		<img src="" alt="">
+		<img loading="lazy" src="" alt="">
 		<button class="btn-slider btn-left" data-action="-1">
-			<img src="/assets/images/icons/arrow-left-solid.svg" alt="flèche gaucche">
+			<img loading="lazy" src="/assets/images/icons/arrow-left-solid.svg" alt="flèche gaucche">
 		</button>
 
 		<button class="btn-slider btn-right" data-actionR="1">
-			<img src="/assets/images/icons/arrow-right-solid.svg" alt="flèche droite">
+			<img loading="lazy" src="/assets/images/icons/arrow-right-solid.svg" alt="flèche droite">
 		</button>
 	</div>
 </div>
@@ -324,11 +328,7 @@
 	<script async src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	
 	<!-- <script  async src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-
-	<script async src="./assets/scripts.js"></script>
 	<script async src="./assets/maugallery.js"></script>
-
-	
 
 </body>
 </html>
