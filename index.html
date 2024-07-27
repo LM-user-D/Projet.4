@@ -60,15 +60,44 @@
 			<div class="carousel-inner">
 				<!-- ici revu les attributs alt des images plus ajout de itemprop... sur les trois div -->
 				<div class="carousel-item active" itemprop="exampleOfWork" itemscope itemtype="http://schema.org/ImageObject">
-					<img  itemprop="contentUrl"  src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="image vu de haut d'un homme en costume d'affaire qui mache sur un passage pieton"  > <!-- ici ajout de l'atribut loading pour resoudre le problème de LCP -->
+					<img  itemprop="contentUrl" 
+					src="./assets/images/slider/1920/walking.webp"
+					srcset="./assets/images/slider/1440/walking.webp 1440w,
+						./assets/images/slider/1024/walking.webp 1024w,
+						./assets/images/slider/768/walking.webp 768w,
+						./assets/images/slider/425/walking.webp 425w,
+						./assets/images/slider/320/walking.webp 320w "
+						sizes="100vw" width="1920" height="888"
+	
+					class="d-block w-100" alt="image vu de haut d'un homme en costume d'affaire qui mache sur un passage pieton"  > <!-- ici ajout de l'atribut loading pour resoudre le problème de LCP -->
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement"   >
+					<img loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/1920/party.webp"
+					srcset="./assets/images/slider/1440/party.webp 1440w,
+					./assets/images/slider/1024/party.webp 1024w,
+					./assets/images/slider/768/party.webp 768w,
+					./assets/images/slider/425/party.webp 425w,
+					./assets/images/slider/320/party.webp 320w"
+					sizes="100vw" width="1920" height="888"
+			
+					
+					
+					class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement"   >
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img  loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" >
+					<img  loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/1920/wedding.webp"
+					srcset="./assets/images/slider/1440/wedding.webp 1440w,
+							./assets/images/slider/1024/wedding.webp 1024w,
+							./assets/images/slider/768/wedding.webp 768w,
+							./assets/images/slider/425/wedding.webp 425w,
+							./assets/images/slider/320/wedding.webp 320w"
+							sizes="100vw" width="1920" height="888"
+					
+					
+					
+					class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" >
 				</div>
 			</div>
 			<!-- BTN qui permetent le defilement des images  -->
@@ -326,8 +355,8 @@
  <!-- aussi ajout de l'atrubyt  -->
 
 	<script async src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	<script async src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 	
-	<!-- <script  async src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 	<script async src="./assets/maugallery.js"></script>
 
 </body>
