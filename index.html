@@ -14,17 +14,25 @@
 
 
 	<!-- ici ajout des balises meta Open Grph -->
-
 	<meta property="og:site_name" content="Nina Carducci Photographe" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://nina-carducci.github.io/" />
 	<meta property="og:title" content="Nina Carducci Photographe à Bordeaux" />
 	<meta property="og:description" content="Nina Carducci photographe porfessionnelle à ville Bordeaux. Photos de vos événements importants, de mariage, de portrait, de votre entreprise." />
-	<meta property="og:image" content="https://nina-carducci.github.io/assets/images/nina.png"/>
+	<meta property="og:image" content="http://127.0.0.1:5501/assets/images/nina.webp"/>
 
+ <!-- Carte Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="Nina-Carducci!">
+	<meta name="twitter:title" content="Nina-Carducci Photographe à Borbeaux">
+	<meta name="twitter:description" content="Nina Carducci photographe porfessionnelle à ville Bordeaux. Photos de vos événements importants, de mariage, de portrait, de votre entreprise.">
+	<meta name="twitter:image" content="http://127.0.0.1:5501/assets/images/nina.webp">
+	<meta name="twitter:url" content="https://lm-user-d.github.io/Projet4/"/>
+	
 
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
@@ -60,44 +68,39 @@
 			<div class="carousel-inner">
 				<!-- ici revu les attributs alt des images plus ajout de itemprop... sur les trois div -->
 				<div class="carousel-item active" itemprop="exampleOfWork" itemscope itemtype="http://schema.org/ImageObject">
-					<img  itemprop="contentUrl" 
-					src="./assets/images/slider/1920/walking.webp"
-					srcset="./assets/images/slider/1440/walking.webp 1440w,
-						./assets/images/slider/1024/walking.webp 1024w,
-						./assets/images/slider/768/walking.webp 768w,
-						./assets/images/slider/425/walking.webp 425w,
-						./assets/images/slider/320/walking.webp 320w "
-						sizes="100vw" width="1920" height="888"
+					
+					<img src="./assets/images/slider/1920/walking.webp" 
+					srcset ="./assets/images/slider/1440/walking.webp 1440w,
+					./assets/images/slider/1024/walking.webp 1024w,
+					./assets/images/slider/768/walking.webp 768w,
+					./assets/images/slider/425/walking.webp 425w,
+					./assets/images/slider/320/walking.webp 320w"
+					sizes="100vw" width="1920" height="888"
+					
 	
 					class="d-block w-100" alt="image vu de haut d'un homme en costume d'affaire qui mache sur un passage pieton"  > <!-- ici ajout de l'atribut loading pour resoudre le problème de LCP -->
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/1920/party.webp"
+					<img itemprop="contentUrl"  src="./assets/images/slider/1920/party.webp"
 					srcset="./assets/images/slider/1440/party.webp 1440w,
 					./assets/images/slider/1024/party.webp 1024w,
 					./assets/images/slider/768/party.webp 768w,
 					./assets/images/slider/425/party.webp 425w,
 					./assets/images/slider/320/party.webp 320w"
 					sizes="100vw" width="1920" height="888"
-			
-					
-					
-					class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement"   >
+					class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement" loading="lazy">
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img  loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/1920/wedding.webp"
+					<img  itemprop="contentUrl"  src="./assets/images/slider/1920/wedding.webp"
 					srcset="./assets/images/slider/1440/wedding.webp 1440w,
-							./assets/images/slider/1024/wedding.webp 1024w,
-							./assets/images/slider/768/wedding.webp 768w,
-							./assets/images/slider/425/wedding.webp 425w,
-							./assets/images/slider/320/wedding.webp 320w"
-							sizes="100vw" width="1920" height="888"
-					
-					
-					
-					class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" >
+					./assets/images/slider/1024/wedding.webp 1024w,
+					./assets/images/slider/768/wedding.webp 768w,
+					./assets/images/slider/425/wedding.webp 425w,
+					./assets/images/slider/320/wedding.webp 320w"
+					sizes="100vw" width="1920" height="888"
+					class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" loading="lazy">
 				</div>
 			</div>
 			<!-- BTN qui permetent le defilement des images  -->
@@ -353,6 +356,8 @@
 
 <!-- les scripts sont ici car on attend que la page soit changée avant l'excution du JS -->
  <!-- aussi ajout de l'atrubyt  -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<script async src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	<script async src="./assets/bootstrap/bootstrap.bundle.min.js"></script>

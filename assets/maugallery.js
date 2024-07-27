@@ -1,3 +1,4 @@
+
 const itemAll=document.querySelector('[data-images="all"]')
 const itemConcert=document.querySelector('[data-images-toggle="Concert"]')
 const itemEntrepriser=document.querySelector('[data-images-toggle="Entreprises"]')
@@ -37,17 +38,17 @@ tabImg=[]
 contentEntreprises.forEach(els=>{els.style.display='block'})
 for(let i=0;i<contentEntreprises.length;i++){contentEntreprises.forEach(els=>{let A=els.children
 A.src=els.children[i].src
+A.alt=els.children[i].alt
 tabImg.push(A)})}})
 itemMariage.addEventListener('click',()=>{removeActive()
 itemMariage.classList.add('active')
 contentItems.forEach(el=>{el.style.display='none'})
 tabImg=[]
-contentMariages.forEach(els=>{removeActive()
-els.style.display='block';for(let i=0;i<contentMariages.length;i++){contentMariages.forEach(els=>{let A=els.children
+contentMariages.forEach(els=>{els.style.display='block';for(let i=0;i<contentMariages.length;i++){contentMariages.forEach(els=>{let A=els.children
 A.src=els.childNodes[i].src
 A.alt=els.childNodes[i].alt
-tabImg.push(A)
-console.log(A)})}})})
+tabImg.push(A)})}})})
+console.log(itemEntrepriser,itemMariage)
 itemPortrait.addEventListener('click',()=>{removeActive()
 itemPortrait.classList.add('active')
 contentItems.forEach(el=>{el.style.display='none'})
