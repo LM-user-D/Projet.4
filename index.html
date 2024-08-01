@@ -52,7 +52,7 @@
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img loading="lazy" src="assets/images/instagram.svg" alt="logo instagram"></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img  src="assets/images/instagram.svg" alt="logo instagram"></a></li>
 			<!-- revu ici l'attribut alt du logo -->
 		</ul>
 	</nav>
@@ -64,12 +64,11 @@
 	<div id="exemplesProjet" itemscope itemtype="http://schema.org/CreativeWork">
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		
-		
 			<div class="carousel-inner">
 				<!-- ici revu les attributs alt des images plus ajout de itemprop... sur les trois div -->
 				<div class="carousel-item active" itemprop="exampleOfWork" itemscope itemtype="http://schema.org/ImageObject">
 					
-					<img src="./assets/images/slider/1920/walking.webp" 
+					<img decoding="async"  loading="lazy" src="./assets/images/slider/1920/walking.webp" 
 					srcset ="./assets/images/slider/1440/walking.webp 1440w,
 					./assets/images/slider/1024/walking.webp 1024w,
 					./assets/images/slider/768/walking.webp 768w,
@@ -82,25 +81,25 @@
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img itemprop="contentUrl"  src="./assets/images/slider/1920/party.webp"
+					<img decoding="async"  loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/1920/party.webp"
 					srcset="./assets/images/slider/1440/party.webp 1440w,
 					./assets/images/slider/1024/party.webp 1024w,
 					./assets/images/slider/768/party.webp 768w,
 					./assets/images/slider/425/party.webp 425w,
 					./assets/images/slider/320/party.webp 320w"
 					sizes="100vw" width="1920" height="888"
-					class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement" loading="lazy">
+					class="d-block w-100" alt="groupe de jeune sont regroupés devant une scène de concert lors d'un évenement" >
 				</div>
 
 				<div class="carousel-item" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-					<img  itemprop="contentUrl"  src="./assets/images/slider/1920/wedding.webp"
+					<img decoding="async"  loading="lazy" itemprop="contentUrl"  src="./assets/images/slider/1920/wedding.webp"
 					srcset="./assets/images/slider/1440/wedding.webp 1440w,
 					./assets/images/slider/1024/wedding.webp 1024w,
 					./assets/images/slider/768/wedding.webp 768w,
 					./assets/images/slider/425/wedding.webp 425w,
 					./assets/images/slider/320/wedding.webp 320w"
 					sizes="100vw" width="1920" height="888"
-					class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" loading="lazy">
+					class="d-block w-100" alt="Photo d'un mariage où l'on voit les mariés" >
 				</div>
 			</div>
 			<!-- BTN qui permetent le defilement des images  -->
@@ -140,15 +139,8 @@
 			<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 
-			<!-- ici ajout de la balise p avec  itemprop="address" et la descrtion des disponibilités  -->
-
-			<p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="disponibilité">Je réponds au téléphone du lundi au vendredi de 10 h à 19 h. Je me situe au </span>
-			<span itemprop="steetAddres">68 avenue Alsace-Lorraine</span>
-			<span itemprop="addressLocality">Bordeaux</span>
-			<span itemprop="postalCode">33200</span>
-			<span itemprop="addressCountry">France</span>
 			
-			</p>
+	
 		</div>
 	</div>	
 	<!-- ici ajout de lien de schéma.org -->
@@ -160,7 +152,7 @@
 			<!-- ici ajout des balises ul et li  -->
 			<ul class="my-4 tags-bar nav ">
 				<li class="nav-item"><span class="nav-link active" data-images="all">Tous</span></li>
-				<li class="nav-item concert"><span class="nav-link" data-images-toggle="Concert">Concert</span></li>
+				<li class="nav-item "><span class="nav-link" data-images-toggle="Concert">Concert</span></li>
 				<li class="nav-item "><span class="nav-link" data-images-toggle="Entreprises">Entreprises</span></li>
 				<li class="nav-item "><span class="nav-link" data-images-toggle="Mariages">Mariages</span></li>
 				<li class="nav-item "><span class="nav-link" data-images-toggle="Portrait">Portrait</span></li>
@@ -266,13 +258,9 @@
 				</div>
 			</div>
 
-
-
 			<div class="service"  itemscope itemtype="http://schema.org/Service">
-
 				<!-- changment de service__description en ... -->
 				<div class="service-description">
-					
 					<!-- ici modification du h3 en h4 -->
 					<h4 itemprop="name">Album photos</h4>
 					<p itemprop="description">Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
@@ -281,10 +269,8 @@
 				<!--  changment de service__price en ... --> 
 
 				<div class="service-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-
 					<!-- ici modification h4 span plus un br-->
 					<meta itemprop="priceCurrency" content="EUR">
-
 					<span itemprop="price" >400€ album A4</span> <br>
 					<span itemprop="description">30 pages recto/verso</span>
 				</div>
@@ -309,15 +295,14 @@
 
 
 <!--ici ajout de lien de schéma.org en plus de itemprop à la balise a -->
-<div id="contact" itemscope itemtype="http://schema.org/ContactPoint">
+<div id="contact" >
 	<div class="container" >
 		<div class="form-container">
 			<!-- A revoir ici le H3 -->
 			<h3>Une question ? Une demande de devis ?</h3>
 			<!-- ici ajout du telephone plus des heunre de disponibilité -->
-			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures, ou à me contact au <a itemprop="telephone" href="tel:+0556677889">05 56 67 78 89</a> du lundi au vendredi de 10 h à 19 h.</p>
+			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures, ou à me contact par téléphone du lundi au vendredi de 10 h à 19 h.</p>
 
-			<!-- ici il faut ajouter l'URL à action  -->
 			<form action="#" method="post">
 				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom">
@@ -354,15 +339,30 @@
 
 </main>
 
+
+	<footer itemscope itemtype="http://schema.org/ContactPoint">
+		
+		<span>Téléphone:<a itemprop="telephone" href="tel:+0556677889">05 56 67 78 89</a> 
+
+		</span>
+
+		<p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+			<span itemprop="steetAddres">Adresse: 68 avenue Alsace-Lorraine</span>
+			<span itemprop="addressLocality">Bordeaux</span>
+			<span itemprop="postalCode">33200</span>
+			<span itemprop="addressCountry">France</span>
+		</p>
+	</footer>
+
 <!-- les scripts sont ici car on attend que la page soit changée avant l'excution du JS -->
  <!-- aussi ajout de l'atrubyt  -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-	<script async src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script async src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+	<script  defer src="./assets/bootstrap/bootstrap.bundle.js"></script>
+	<script  defer ="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 	
-	<script async src="./assets/maugallery.js"></script>
+	<script  defer src="./assets/maugallery.js"></script>
 
 </body>
 </html>

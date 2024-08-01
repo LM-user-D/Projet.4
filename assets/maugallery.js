@@ -11,18 +11,23 @@ const contentEntreprises=document.querySelectorAll('[data-gallery-tag="Entrepris
 const contentMariages=document.querySelectorAll('[data-gallery-tag="Mariages"]')
 const contentProtraits=document.querySelectorAll('[data-gallery-tag="Portrait"]')
 const galleryItems=document.querySelectorAll('.gallery-item')
-let index=0
+console.log(contentEntreprises);let index=0
 let tabImg=[]
 function removeActive(){navItems.forEach(items=>{items.classList.remove('active')})}
+function mouve(){contentItems.forEach(els=>{els.classList.add('acter')})}
+function secondAnimation(){contentItems.forEach(els=>{els.classList.add('acte')})}
 itemAll.addEventListener('click',()=>{removeActive()
+mouve()
+secondAnimation()
 itemAll.classList.add('active')
 tabImg=[]
 contentItems.forEach(els=>{els.style.display='block'})
 for(let i=0;i<contentItems.length;i++){contentItems.forEach(els=>{let A=els.children
 A.src=els.children[i].src
-A.alt=els.children[i].alt
+A.alt=els.children[i].src
 tabImg.push(A)})}})
 itemConcert.addEventListener('click',()=>{removeActive()
+mouve()
 itemConcert.classList.add('active')
 contentItems.forEach(el=>{el.style.display='none'})
 tabImg=[]
@@ -32,31 +37,34 @@ A.src=els.childNodes[i].src
 A.alt=els.childNodes[i].alt
 tabImg.push(A)})}})})
 itemEntrepriser.addEventListener('click',()=>{removeActive()
+mouve()
 itemEntrepriser.classList.add('active')
 contentItems.forEach(el=>{el.style.display='none'})
 tabImg=[]
 contentEntreprises.forEach(els=>{els.style.display='block'})
 for(let i=0;i<contentEntreprises.length;i++){contentEntreprises.forEach(els=>{let A=els.children
 A.src=els.children[i].src
-A.alt=els.children[i].alt
 tabImg.push(A)})}})
 itemMariage.addEventListener('click',()=>{removeActive()
+mouve()
 itemMariage.classList.add('active')
 contentItems.forEach(el=>{el.style.display='none'})
 tabImg=[]
-contentMariages.forEach(els=>{els.style.display='block';for(let i=0;i<contentMariages.length;i++){contentMariages.forEach(els=>{let A=els.children
+contentMariages.forEach(els=>{els.style.display='block'})
+for(let i=0;i<contentMariages.length;i++){contentMariages.forEach(els=>{let A=els.children
 A.src=els.childNodes[i].src
 A.alt=els.childNodes[i].alt
-tabImg.push(A)})}})})
-console.log(itemEntrepriser,itemMariage)
+tabImg.push(A)})}})
 itemPortrait.addEventListener('click',()=>{removeActive()
+mouve()
 itemPortrait.classList.add('active')
 contentItems.forEach(el=>{el.style.display='none'})
 tabImg=[]
-contentProtraits.forEach(els=>{els.style.display='block';for(let i=0;i<contentProtraits.length;i++){contentProtraits.forEach(els=>{let A=els.children
+contentProtraits.forEach(els=>{els.style.display='block'})
+for(let i=0;i<contentProtraits.length;i++){contentProtraits.forEach(els=>{let A=els.children
 A.src=els.childNodes[i].src
 A.alt=els.childNodes[i].alt
-tabImg.push(A)})}})})
+tabImg.push(A)})}})
 function imageTableau(){for(let i=0;i<galleryItems.length;i++){let A=document.createElement("img")
 A.src=galleryItems[i].src
 A.alt=galleryItems[i].alt
