@@ -1,4 +1,3 @@
-
 const itemAll=document.querySelector('[data-images="all"]')
 const itemConcert=document.querySelector('[data-images-toggle="Concert"]')
 const itemEntrepriser=document.querySelector('[data-images-toggle="Entreprises"]')
@@ -11,7 +10,16 @@ const contentEntreprises=document.querySelectorAll('[data-gallery-tag="Entrepris
 const contentMariages=document.querySelectorAll('[data-gallery-tag="Mariages"]')
 const contentProtraits=document.querySelectorAll('[data-gallery-tag="Portrait"]')
 const galleryItems=document.querySelectorAll('.gallery-item')
-console.log(contentEntreprises);let index=0
+console.log(contentEntreprises);const containerSlider=document.querySelector('.modale')
+const boiteSlider=document.querySelector('.container-slider')
+let imgSlider=document.querySelector('.container-slider img')
+function gestionClicModale(){containerSlider.addEventListener('click',()=>{boiteSlider.classList.add('mouve')
+containerSlider.classList.add('dsp')
+contentItems.forEach(el=>{el.addEventListener('click',()=>{boiteSlider.classList.remove('mouve')
+containerSlider.classList.remove('dsp')})})})
+boiteSlider.addEventListener('click',(e)=>{e.stopPropagation()})}
+gestionClicModale()
+let index=0
 let tabImg=[]
 function removeActive(){navItems.forEach(items=>{items.classList.remove('active')})}
 function mouve(){contentItems.forEach(els=>{els.classList.add('acter')})}
@@ -70,12 +78,6 @@ A.src=galleryItems[i].src
 A.alt=galleryItems[i].alt
 tabImg.push(A)}}
 imageTableau()
-const containerSlider=document.querySelector('.modale')
-const boiteSlider=document.querySelector('.container-slider')
-let imgSlider=document.querySelector('.container-slider img')
-function gestionClicModale(){containerSlider.addEventListener('click',()=>{containerSlider.style.display='none'})
-boiteSlider.addEventListener('click',(e)=>{e.stopPropagation()})}
-gestionClicModale()
 galleryItems.forEach((element,id)=>{element.addEventListener('click',()=>{containerSlider.style.display="block"
 imgSlider.src=element.src
 imgSlider.alt=element.alt
